@@ -1,0 +1,23 @@
+{
+  "name": "freeme-calc",
+  "version": "1.0.0",
+  "description": "Free me calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxcache/Freemecalc.git"
+  },
+  "keywords": [
+    "intrest",
+    "calc"
+  ],
+  "author": "Vikram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxcache/Freemecalc/issues"
+  },
+  "homepage": "https://github.com/maxcache/Freemecalc#readme"
+}
