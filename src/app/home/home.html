@@ -1,0 +1,60 @@
+<form name="myform" #f="ngForm" novalidate>
+
+	<md-card>		
+		<md-card-title>Loan Profile</md-card-title>
+		<md-card-subtitle>Summary</md-card-subtitle>
+		<md-card-content>
+			<p>Monthly Payment : {{calculators[0].PaymentPerPeriod | currency : 'NZD':true}}</p>
+			<p>Total Payments : {{calculators[0].TotalPayments}}</p>
+			<p>Annual Interest : {{calculators[0].AnnualInterest}}%</p>
+		</md-card-content>
+		<md-card-actions>
+		</md-card-actions>
+	</md-card>
+
+
+
+
+
+	<table width="100%">
+		<thead>
+			<th> Description </th>
+			<th> Opening </th>
+			<th>Principal </th>
+			<th>Interest </th>
+			<th>PMT </th>
+			<th>Closing </th>
+		</thead>
+		<tr *ngFor="let item2 of calculators[0].Results">
+			<td>
+				{{item2.Description}}
+			</td>
+			<td>
+
+				{{item2.Opening | currency : 'NZD':true}}
+			</td>
+
+			<td>
+				{{item2.Principal | currency : 'NZD':true}}
+
+			</td>
+
+			<td>
+				{{item2.Interest | currency : 'NZD':true}}
+
+			</td>
+
+			<td>
+				{{item2.AmountToPay | currency : 'NZD':true}}
+
+			</td>
+
+
+			<td>
+				{{item2.Closing | currency : 'NZD':true}}
+
+			</td>
+		</tr>
+	</table>
+	<input type="button" (click)="calculate()" value="Calc" />
+</form>
